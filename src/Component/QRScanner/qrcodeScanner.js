@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {QrReader} from 'react-qr-reader';
+import QrReader from 'react-qr-scanner';
 
 const QRScanner = () => {
   const [result, setResult] = useState('');
@@ -17,11 +17,10 @@ const QRScanner = () => {
   return (
     <div>
       <QrReader
-      className='qrscanner'
         delay={300}
         onError={handleError}
         onScan={handleScan}
-        style={{ width: '50%' }}
+        style={{ width: '100%' }}
       />
       <p>{result}</p>
     </div>
