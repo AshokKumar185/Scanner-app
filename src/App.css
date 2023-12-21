@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+.scan-button {
+  background-color: #61dafb;
+  border: none;
+  width: 120px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border-radius: 4px;
+  height: 45px;
+  cursor: pointer;
+  margin: 30px;
+}
+.scanner-bg-container {
+height: 100vh;
+}
+.scanner-btn-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-top: 30px;
+}

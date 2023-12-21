@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import QRScanner from './Component/QRScanner/qrcodeScanner';
 
 function App() {
+  const [clickScanner, setScanner] = useState(false)
+  const clickToScan = () => {
+    setScanner(true)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='scanner-bg-container'>
+      <div className='scanner-btn-container'>
+    <button type='button' className='scan-button' onClick={clickToScan}>Scan</button>
     </div>
+    {clickScanner ? <QRScanner /> : ""}
+    </div>
+   
   );
 }
 
