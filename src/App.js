@@ -12,7 +12,7 @@ function App() {
       <div className='scanner-btn-container'>
     <button type='button' className='scan-button' onClick={clickToScan}>Scan</button>
     </div>
-    {clickScanner ? <QRScanner /> : ""}
+    <QRScanner /> 
     </div>
    
   );
