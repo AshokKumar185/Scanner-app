@@ -29,6 +29,7 @@ const QRScanner = () => {
         onError={handleError}
         onScan={handleScan}
         style={{ width: '100%' }}
+        facingMode="environment"
       />
       <p>{result}</p>
     </div>
