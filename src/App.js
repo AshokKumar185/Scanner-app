@@ -47,8 +47,10 @@ const App = () => {
 
   const handleScan = async (scanData) => {
     console.log(`loaded data data`, scanData);
+   
     if (scanData && scanData !== "" && !showDialog && !processing) {
       console.log(`loaded >>>`, scanData);
+      setSelected("")
       // setPrecScan(scanData);
       await fetchData({ qr: scanData });
     }
