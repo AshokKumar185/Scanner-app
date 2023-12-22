@@ -1,6 +1,5 @@
 import "./App.css";
 import { useState } from "react";
-import QrReader from "react-qr-reader";
 import QrScanner from "react-qr-scanner"
 import axios from "axios";
 import { useEffect } from "react";
