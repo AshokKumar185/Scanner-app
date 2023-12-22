@@ -64,8 +64,8 @@ const App = () => {
         {selected}
       </h2>
       <select onChange={(e) => setSelected(e.target.value)}>
-        <option value={"environment"}>Back Camera</option>
-        <option value={"user"}>Front Camera</option>
+        <option value={"rear"}>Back Camera</option>
+        <option value={"front"}>Front Camera</option>
       </select>
       {showDialog && (
         <div className="dialog">
