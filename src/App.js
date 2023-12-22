@@ -49,9 +49,9 @@ const App = () => {
     console.log(`loaded data data`, scanData);
    
     if (scanData && scanData !== "" && !showDialog && !processing) {
-      console.log(`loaded >>>`, scanData);
+      console.log(`loaded >>>`, scanData.text);
       setSelected("")
-      // setPrecScan(scanData);
+      setPrecScan( scanData.text);
       await fetchData({ qr: scanData });
     }
   };
@@ -69,6 +69,7 @@ const App = () => {
         <option value={"rear"}>Back Camera</option>
         <option value={"front"}>Front Camera</option>
       </select>
+
       {showDialog && (
         <div className="dialog">
           <div className="dialog-content">
