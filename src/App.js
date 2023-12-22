@@ -1,6 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import QrReader from "react-qr-reader";
+import QrScanner from "react-qr-scanner"
 import axios from "axios";
 import { useEffect } from "react";
 
@@ -157,13 +158,14 @@ const App = () => {
       )}
       {/* {code && <h2>{code.text}</h2>} */}
       {!showDialog && !processing && (
-        <QrReader
+        <QrScanner
           facingMode={selected}
           delay={500}
           onError={handleError}
           onScan={handleScan}
           // chooseDeviceId={()=>selected}
           style={{ width: "200px", heigth: "100px" }}
+          legacyMode={false} 
         />
       )}
     </div>
