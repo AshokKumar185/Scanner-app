@@ -9,7 +9,7 @@ const App = () => {
   const [showDialog, setDiaglog] = useState(false);
   const [processing, setProcessing] = useState(false);
   const [precScan, setPrecScan] = useState("");
-  const [selected, setSelected] = useState("environment");
+  const [selected, setSelected] = useState("rear");
   const [errorMessage, setErrorMessage] = useState(null);
 
   async function fetchData({ qr = "" }) {
